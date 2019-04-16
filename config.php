@@ -1,9 +1,9 @@
 <?php 
 
 $config = array('db' => array(
-	'host' => "localhost",
-	'database' => "musikhalif",
-	'username' => "root",
-	'password' => "",
-	'port' => 3306
+	'host' => "", 		# Host address
+	'database' => "", 	# Database name
+	'username' => "", 	# Username
+	'password' => "", 	# Password
+	'port' => 3306		# Port
 ));
