@@ -12,6 +12,6 @@ Clone the repository to a server and start sending you requests to build **path/
 
 To set the database connection go to **/path/to/mysql-api-endpoint/config.php** and set you database connection settings
 
-## More setting
+## Documentation
 
-Find the complete documentation on https://emagombe.github.io/mysql-api-endpoint/
+Find the complete documentation on https://emagombe.github.io/mysql-api-endpoint/docs/
