@@ -14,4 +14,4 @@ To set the database connection go to **/path/to/mysql-api-endpoint/config.php** 
 
 ## Documentation
 
-Find the complete documentation on https://emagombe.github.io/projects/mysql-api-endpoint/docs/
+Find the complete documentation on https://emagombe.github.io/projects/mysql-api-endpoint
