@@ -64,7 +64,8 @@ Find stored data in the database
 	}
 }
 ```
-### Cutting the ammount of returned data with *Limit*
+#### Cutting the ammount of returned data with (*Limit*)
+Cut returned data from the database
 ```javascript
 {
 	action: 'find',
@@ -73,7 +74,8 @@ Find stored data in the database
 	limit: 2		// Will return the first two rows
 }
 ```
-### Ordering data
+#### Ordering data
+Order the returned data
 ```javascript
 {
 	action: 'find',
@@ -84,7 +86,8 @@ Find stored data in the database
 }
 ```
 
-### Between
+#### Between
+Select column data range
 ```javascript
 {
 	action: 'find',
@@ -98,3 +101,82 @@ Find stored data in the database
 }
 ```
 
+## Udate
+
+Update data in the database
+
+```javascript
+{
+	action: 'update',
+	tbl: 'user',		// Table name
+	col: {			// Columns to be updated. The key indicates the column and the value is the new value to be set
+		userType: 'Admin',
+	},
+	cond: {
+		userType: 'employee',
+	}
+}
+```
+
+## Remove
+
+Remove data from the database
+
+```javascript
+{
+	action: 'update',
+	tbl: 'user',		// Table name
+	cond: {
+		id: 1,
+	}
+}
+```
+
+## Athenetication
+
+In case that you need to create a login system, you can use the authentication parametes to authenticate.
+This authentication method uses **password_hash** to hash the password and **password_verify** method to verify your password.
+
+**Hasing password**
+
+This will return a encrypted password
+```javascript
+{
+	action: 'hash',
+	key: 'my-password'
+}
+```
+**Authenticating the stored enctrypted user data**
+
+If success this will return the whole user data
+```javascript
+{
+	action: 'authenticate',
+	tbl: 'user',			// Table name
+	username: 'my.username',	
+	password: 'my.secret.password',
+}
+```
+## MD5
+
+Encrypt data using php md5 method
+```javascript
+{
+	action: 'md5',
+	key: 'sometimes i wish to stop coding',
+}
+```
+## Upload
+
+File upload
+
+```javascript
+{
+	action: 'upload',
+	multiple: 'false',		// Set  to true if you wish to upload multiple files from an input
+}
+
+// This will return the file information (path, size, filetype)
+
+
+```
