@@ -25,7 +25,15 @@ $config = array('db' => array(
 
 Find the complete documentation on https://emagombe.github.io/projects/mysql-api-endpoint (*Documentation page in development*)
 
+## Action status
 
+Returned information for an executed action (not in all cases, sometimes it may return a specific data depending of the action).
+
+| Code | Description |
+-------| ------------|
+| 200  | success     |
+| 404  | Not found   |
+| 500  | Filed executing query |
 ## Store
 
 Storing data on database
@@ -116,6 +124,8 @@ Update data in the database
 		userType: 'employee',
 	}
 }
+
+// if success this will return 200
 ```
 
 ## Remove
@@ -130,6 +140,7 @@ Remove data from the database
 		id: 1,
 	}
 }
+// if success this will return 200
 ```
 
 ## Athentication
@@ -145,6 +156,7 @@ This will return a encrypted password
 	action: 'hash',
 	key: 'my-password'
 }
+// if success this will return the encrypted password
 ```
 **Authenticating the stored enctrypted user data**
 
@@ -156,6 +168,7 @@ If success this will return the whole user data
 	username: 'my.username',	
 	password: 'my.secret.password',
 }
+// if success this will return 200
 ```
 ## MD5
 
@@ -165,6 +178,7 @@ Encrypt data using php md5 method
 	action: 'md5',
 	key: 'sometimes i wish to stop coding',
 }
+// if success this will return the encrypted key
 ```
 ## Upload
 
