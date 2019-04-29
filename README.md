@@ -132,7 +132,7 @@ Remove data from the database
 }
 ```
 
-## Athenetication
+## Athentication
 
 In case that you need to create a login system, you can use the authentication parametes to authenticate.
 This authentication method uses **password_hash** to hash the password and **password_verify** method to verify your password.
