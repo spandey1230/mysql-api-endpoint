@@ -43,8 +43,58 @@ Storing data on database
   }
 }
 ```
-| Key   | Description                                             |
-|------ | --------------------------------------------------------|
-|**tbl**| the name of the table                                   |
-|**val**| values(key is the column name and the value is the )    |
-|
+| Key   | Description                                             		| Data type	 |
+|------ | ----------------------------------------------------------------------|-----------------
+|**tbl**| the name of the table                                   		| String 	 |
+|**val**| values(key is the column name and value is the value of the column)   | JSON		 |
+|**action**| The action to be excuted (store, find, update, delete, Remove, ...)| String	 |
+
+
+## Find
+
+Find stored data in the database
+
+```javascript
+{
+	action: 'find',
+	tbl: ['user'],		// Table name
+	col: ['*'],		// Columns (use * for all columns)
+	cond: {			// Condition (Apply conditions to filter your data)
+		id: 1
+	}
+}
+```
+### Cutting the ammount of returned data with *Limit*
+```javascript
+{
+	action: 'find',
+	tbl: ['user'],		// Table name
+	col: ['*'],		// Columns (use * for all columns)
+	limit: 2		// Will return the first two rows
+}
+```
+### Ordering data
+```javascript
+{
+	action: 'find',
+	tbl: ['user'],		// Table name
+	col: ['*'],		// Columns (use * for all columns)
+	ordby: 'id',		// Column to order
+	ord: 'ASC'		// Use ASC or DESC
+}
+```
+
+### Between
+```javascript
+{
+	action: 'find',
+	tbl: ['user'],		// Table name
+	col: ['*'],		// Columns (use * for all columns)
+	cond: {
+		userType: 'Admin'
+	},
+	between: ['id', 1, 3],		// Between depends of cond 
+					// First the column then the range
+}
+```
+
