@@ -6,7 +6,7 @@ Full prepared to manage all your database requests without coding
 
 ## How to use
 
-Download the progect release https://github.com/emagombe/mysql-api-endpoint/releases set it into a php server to a server and start sending requests to build **path/to/mysql-api-endpoint/endpoint/PhpDataTarget.php**
+Download the progect release https://github.com/emagombe/mysql-api-endpoint/releases set it into a php server to a server and start sending requests to **path/to/mysql-api-endpoint/endpoint/PhpDataTarget.php**
 
 ## Database settings
 
